@@ -2,25 +2,30 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
         <title>Babylon.js sample code</title>
 
         <!-- Babylon.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.2/dat.gui.min.js"></script>
         <script src="https://assets.babylonjs.com/generated/Assets.js"></script>
         <script src="https://preview.babylonjs.com/ammo.js"></script>
         <script src="https://preview.babylonjs.com/cannon.js"></script>
         <script src="https://preview.babylonjs.com/Oimo.js"></script>
         <script src="https://preview.babylonjs.com/earcut.min.js"></script>
         <script src="https://preview.babylonjs.com/babylon.js"></script>
-        <script src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
-        <script src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
-        <script src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
-        <script src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
-        <script src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
+        <script
+            src="https://preview.babylonjs.com/materialsLibrary/babylonjs.materials.min.js"></script>
+        <script
+            src="https://preview.babylonjs.com/proceduralTexturesLibrary/babylonjs.proceduralTextures.min.js"></script>
+        <script
+            src="https://preview.babylonjs.com/postProcessesLibrary/babylonjs.postProcess.min.js"></script>
+        <script
+            src="https://preview.babylonjs.com/loaders/babylonjs.loaders.js"></script>
+        <script
+            src="https://preview.babylonjs.com/serializers/babylonjs.serializers.min.js"></script>
         <script src="https://preview.babylonjs.com/gui/babylon.gui.min.js"></script>
-        <script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
-
+        <script
+            src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
         <style>
             html, body {
                 overflow: hidden;
@@ -37,9 +42,9 @@
             }
         </style>
     </head>
-<body>
-    <canvas id="renderCanvas"></canvas>
-    <script>
+    <body>
+        <canvas id="renderCanvas"></canvas>
+        <script>
         var canvas = document.getElementById("renderCanvas");
 
         var startRenderLoop = function (engine, canvas) {
@@ -125,8 +130,8 @@ const createStar = (scene) => {
     // color of light emanating from obj
     mat.emissiveColor = new BABYLON.Color3(0.37, 0.33, 0.11);
     // color map of light reflected off object
-//     mat.diffuseTexture = new BABYLON.Texture("textures/distortion.png", scene);
-//     mat.diffuseTexture.level = 1.8;
+    mat.diffuseTexture = new BABYLON.Texture("./assets/textures/distortion.png", scene);
+    mat.diffuseTexture.level = 1.8;
     return star;
 }
 
@@ -188,10 +193,10 @@ const createPlanet = (opts, scene) => {
     mat.specularPower = 0;
     
     if (opts.rocky === true) {
-        mat.bumpTexture = new BABYLON.Texture("textures/rockn.png", scene);
-        mat.diffuseTexture = new BABYLON.Texture("textures/rock.png", scene);
+        mat.bumpTexture = new BABYLON.Texture("./assets/textures/rockn.png", scene);
+        mat.diffuseTexture = new BABYLON.Texture("./assets/textures/rock.png", scene);
     } else {
-        mat.diffuseTexture = new BABYLON.Texture("textures/distortion.png", scene);
+        mat.diffuseTexture = new BABYLON.Texture("./assets/textures/distortion.png", scene);
     }
 
     planet.material = mat;
@@ -275,5 +280,5 @@ const createAndStartOrbitAnimation = (planet, scene) => {
             engine.resize();
         });
     </script>
-</body>
+    </body>
 </html>
