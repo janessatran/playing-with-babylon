@@ -122,9 +122,11 @@ const createStar = (scene) => {
     }, scene);
     let mat = new BABYLON.StandardMaterial("starMat", scene);
     star.material = mat;
-    mat.emissiveColor = new BABYLON.Color3(0.37, 0.33, 0.11); // color of light emanating from obj
-    mat.diffuseTexture = new BABYLON.Texture("textures/distortion.png", scene); // color map of light reflected off object
-    mat.diffuseTexture.level = 1.8;
+    // color of light emanating from obj
+    mat.emissiveColor = new BABYLON.Color3(0.37, 0.33, 0.11);
+    // color map of light reflected off object
+//     mat.diffuseTexture = new BABYLON.Texture("textures/distortion.png", scene);
+//     mat.diffuseTexture.level = 1.8;
     return star;
 }
 
